@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app.routes';
 import { AppComponent } from './app.component';
 import { DemoMaterial2Component } from './demo-material2/demo-material2.component';
 import { HomeComponent } from './home/home.component';
+import { ByteFormatPipe } from './pipes/byte-format.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoMaterial2Component,
-    HomeComponent
+    HomeComponent,
+    ByteFormatPipe
   ],
   imports: [
     BrowserModule,

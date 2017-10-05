@@ -7,6 +7,7 @@ import { MaterializeAction } from 'angular2-materialize';
   styles: []
 })
 export class DemoMaterial2Component implements OnInit {
+  images: Array<Object> = [];
   modalActions = new EventEmitter<string | MaterializeAction>();
   selectOptions: any = [
     { name: 'Java', value: 1500 },
@@ -15,7 +16,9 @@ export class DemoMaterial2Component implements OnInit {
     { name: 'Bootstrap3', value: 750 },
     { name: 'Bootstrap4', value: 850 },
     { name: 'Material', value: 900 },
-    { name: 'Material2', value: 950 }
+    { name: 'Material2', value: 950 },
+    { name: 'React', value: 1200 },
+    { name: 'React Native', value: 1300 }
   ];
   constructor() { }
 
@@ -29,4 +32,29 @@ export class DemoMaterial2Component implements OnInit {
     this.modalActions.emit({ action: 'modal', params: ['close'] });
   }
 
+
+  handleDrop(e) {
+    const files: File = e.dataTransfer.files;
+    const self = this;
+    Object.keys(files).forEach((key) => {
+      if (files[key].type === 'image/png' || files[key].type === 'image/jpeg') {
+        self.images.push(files[key]);
+      } else {
+        alert('File must be a PNG or JPEG!');
+      }
+    });
+
+    return false;
+  }
+
+  imageStats() {
+    const sizes: Array<number> = [];
+    let totalSize: number = 0;
+    this.images.forEach((image: File) => sizes.push(image.size));
+    sizes.forEach((size: number) => totalSize += size);
+    return {
+      size: totalSize,
+      count: this.images.length
+    };
+  }
 }

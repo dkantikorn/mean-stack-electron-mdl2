@@ -1,0 +1,34 @@
+{
+  "name": "mean-stack-with-electron",
+  "version": "0.1.0",
+  "main": "electron.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+xxxxx"
+  },
+  "bugs": {
+    "url": "https://github.com/dkantikorn/XXXXXXXXX/issues"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "Angular"
+  ],
+  "author": "YaRG <sarawutt.b@gmail.com>",
+  "homepage": "https://github.com/dkantikorn/XXXXXXXXX/#readme",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "build-electron": "ng build --base-href . && cp src/electron/* dist",
+    "electron": "npm run build-electron && electron dist",
+    "start-concurrenly": "concurrently \"ng build --base-href . && cp src/electron/* dist\" \"electron dist\""
+  },
+  "private": true
+}
