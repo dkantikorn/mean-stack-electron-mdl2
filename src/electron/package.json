@@ -5,10 +5,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+xxxxx"
+    "url": "git+https://github.com/dkantikorn/mean-stack-electron-mdl2.git"
   },
   "bugs": {
-    "url": "https://github.com/dkantikorn/XXXXXXXXX/issues"
+    "url": "https://github.com/dkantikorn/mean-stack-electron-mdl2/issues"
   },
   "keywords": [
     "Electron",
@@ -18,7 +18,7 @@
     "Angular"
   ],
   "author": "YaRG <sarawutt.b@gmail.com>",
-  "homepage": "https://github.com/dkantikorn/XXXXXXXXX/#readme",
+  "homepage": "https://github.com/dkantikorn/mean-stack-electron-mdl2/#readme",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
