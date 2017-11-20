@@ -46,7 +46,6 @@
     "concurrently": "^3.5.0",
     "core-js": "^2.4.1",
     "electron": "^1.7.8",
-    "electron-prebuilt": "^1.4.13",
     "gulp": "^3.9.1",
     "hammerjs": "^2.0.8",
     "jquery": "^2.2.4",
